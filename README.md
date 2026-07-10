@@ -75,9 +75,14 @@ public OnPlayerSpawn(playerid)
 			SendClientMessage(playerid, 0xFF0000FF, "Warning: CLEO detected.");
 		}
 
-		if (SAMobile_HasMonetLoader(playerid) || SAMobile_HasAML(playerid))
+		if (SAMobile_HasMonetLoader(playerid))
 		{
-			SendClientMessage(playerid, 0xFF0000FF, "Warning: Mod loader detected.");
+			SendClientMessage(playerid, 0xFF0000FF, "Warning: MonetLoader detected.");
+		}
+
+        if (SAMobile_HasAML(playerid))
+		{
+			SendClientMessage(playerid, 0xFF0000FF, "Warning: AML detected.");
 		}
 	}
 	else
